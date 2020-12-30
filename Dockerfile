@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get install sbt
 RUN git clone https://github.com/shuosc/shuorv.git
 RUN cd shuorv
+RUN ls
 RUN sbt test -Dsbt.rootdir=true
 RUN cd ..
 RUN rm -rf shuorv
