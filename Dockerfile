@@ -5,8 +5,6 @@ RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.lis
 RUN curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add
 RUN apt-get update
 RUN apt-get install sbt
-RUN git clone https://github.com/shuosc/shuorv.git
-RUN cd shuorv
+RUN git submodule update --init --recursive
 RUN sbt test
-RUN cd ..
-RUN rm -rf shuorv
+
