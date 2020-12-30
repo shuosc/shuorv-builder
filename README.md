@@ -13,5 +13,6 @@ This system should pass ucb-bar/rscv-main.git 's make process.
 
 Simply run
 ```bash
-docker run -it -v $(pwd)/:/Code shuorv-builder:latest bash
+docker run -it -v $(pwd)/:/Code shuosc/shuorv-builder:latest bash
 ```
+
